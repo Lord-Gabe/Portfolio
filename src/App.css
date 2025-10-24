@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -7,45 +11,11 @@
   background-color: rgb(0, 0, 0);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+@keyframes slowMove {
+  from { background-position: 0 0; }
+  to { background-position: 100% 100%; }
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #d14343;
-}
-
-button{
-  background-color: #5e5e5e;
-}
 
 /* My own customables */
 
@@ -61,12 +31,18 @@ button{
   padding: 3%;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
 #title{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: gold;
   justify-content: left;
   display: flex;
-
+  animation: glowPulse 3s infinite alternate;
 }
 
 #nav{
@@ -107,12 +83,22 @@ button{
   margin-left: 50%;
 }
 
-#inner-black{
+#inner-black-about{
   background-color: black;
   margin-left: -25%;
   margin-right: 5%;
   margin-top: 1.5%;
   border-radius: 45px;
+  border: 1px solid goldenrod;
+}
+
+#inner-black-vision{
+  background-color: black;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1.5%;
+  border-radius: 45px;
+  border: 1px solid goldenrod;
 }
 
 section{
@@ -132,7 +118,9 @@ section{
 }
 
 #sec2{
-  background: linear-gradient(180deg, goldenrod 0%, black 100%) ;
+  background: linear-gradient(180deg, #818181, #000);
+  border: 1px solid goldenrod;
+  border-radius: 20px;
 }
 
 #vision{
@@ -155,46 +143,20 @@ section{
   transition: ease-in-out;
   transition-duration: 0.5s;
 }
-/*  */
+
 /*  */
 
 #bg-vision{
+  background: linear-gradient(180deg, #ffffff 0%, #000 50%);
+  border-radius: 500px;
+  padding: 40px;
   margin-left: 60%;
+  margin-top: -20px;
+  width: 20rem;
+  height: 20rem;
 }
 
-#projects-img{
-  background: linear-gradient(180deg, white 0%, rgb(0, 0, 0) 100%);
-  margin-right: 75%;
-  border-radius: 40px;
-  padding-left: 4%;
-  padding-right: 4%;
-  position: absolute;
-}
-
-#projects-img1{
-  background: linear-gradient(180deg, white 0%, rgb(0, 0, 0) 100%);
-  margin-bottom: 10px;
-  margin-right: 55%;
-  margin-left: 35%;
-  padding-left: 5%;
-  padding-right: 4%;
-  border-radius: 40px;
-  position: absolute;
-}
-
-#projects-img2{
-  background: linear-gradient(180deg, white 0%, rgb(0, 0, 0) 100%);
-  margin-bottom: 3px;
-  margin-left: 75%;
-  border-radius: 40px;
-  padding-bottom: 3%;
-}
-
-#soon{
-  margin-left: -15%;
-  margin-right: -45%;
-}
-
+/* texts */
 p{
   margin-left: 3%;
   margin-right: 3%;
@@ -206,7 +168,7 @@ h1{
   color: goldenrod;
 }
 h2{color: white;}
-h3{color: rgb(250, 215, 149);}
+h3{color: rgb(255, 166, 0); font-size: 20px;}
 h4{color: rgb(250, 215, 149);}
 h5{color: rgb(250, 215, 149);}
 
@@ -250,7 +212,233 @@ footer{
   padding: 3%;
 }
 
+#footer{
+  color: gold;
+}
+
 #foot{
   color:gold;
 }
 
+#contact a{
+  margin-left: 10px;
+  margin-right: 10px;
+  color: goldenrod;
+  font-size: larger;
+}
+
+/* social media contacts */
+#social{
+  height: 40px;
+  width: 40px;
+}
+#social2{
+  height: 45px;
+  width: 45px;
+}
+
+/* What i do section */
+.service-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.service-card {
+  background: linear-gradient(180deg, #111, #000);
+  border: 1px solid goldenrod;
+  border-radius: 20px;
+  padding: 20px;
+  width: 280px;
+  color: white;
+  transition: transform 0.3s;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+/* --- ANIMATIONS --- */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.2s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Fade-in for sections */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Glow pulse for golden text */
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 5px gold, 0 0 10px goldenrod; }
+  50% { text-shadow: 0 0 20px gold, 0 0 40px orange; }
+  100% { text-shadow: 0 0 5px gold, 0 0 10px goldenrod; }
+}
+
+.scale-hover:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Subtle image entrance */
+.fade-in {
+  opacity: 1;
+  animation: fadeIn 2.4s ease-in-out both;
+}
+
+.fade-in-text {
+  opacity: 1;
+  animation: fadeIn 1.2s ease-in-out both;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* For tablets and medium screens */
+@media (max-width: 1024px) {
+  #head {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  #profile-img {
+    position: relative;
+    margin: 20px auto;
+    width: 60%;
+    height: auto;
+  }
+
+  #intro {
+    margin-left: 0;
+  }
+
+  #inner-black-about, 
+  #inner-black-vision {
+    margin: 20px;
+  }
+
+  #vision {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  #bg-vision {
+    display: block;
+    margin: 30px auto;
+    width: 60%;
+    height: auto;
+    padding: 0;
+  }
+
+  .service-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  #title {
+    font-size: 1.5rem;
+    justify-content: center;
+    display: flex;
+  }
+
+  #nav il {
+    margin: 5px 0 10px -35px;
+  }
+
+  #profile-img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 30px;
+  }
+
+  #intro, #vision {
+    margin: 0;
+  }
+
+  p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .service-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .service-card {
+    width: 85%;
+  }
+
+  #bg-vision {
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 20px;
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+
+  #contact a img {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  #title {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  #profile-img {
+    width: 90%;
+    border-radius: 20px;
+  }
+
+  .service-card {
+    width: 95%;
+  }
+
+  #bg-vision {
+    width: 90%;
+    border-radius: 15px;
+  }
+}

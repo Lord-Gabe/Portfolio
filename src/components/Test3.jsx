@@ -4,7 +4,7 @@ export default function Test2(){
 
     //to previous page
     function prev_page(){
-        <Link to="/Affliates"></Link>
+        <Link to="/affiliates"></Link>
     }
     function home_page(){
         <Link to="/"></Link>
@@ -22,7 +22,7 @@ export default function Test2(){
                     </h2>
                     <ul id="nav">
                         <il> <a id="c" href="/" onClick={home_page()}>Home</a></il>
-                        <il> <a id= "d" href="/Affliates" onClick={prev_page()}>Affliates</a> </il>
+                        <il> <a id= "d" href="/affiliates" onClick={prev_page()}>Projects</a> </il>
                     </ul>
                 </div>
             </header>
@@ -30,20 +30,16 @@ export default function Test2(){
             <h1>Donate</h1>
             <section id="sec2-intro">    
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eaque quod cumque possimus rem recusandae tenetur,
-                    id molestias at dolorem esse dignissimos suscipit neque ut atque, nisi minus veritatis. Quisquam.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eaque quod cumque possimus rem recusandae tenetur,
-                    id molestias at dolorem esse dignissimos suscipit neque ut atque, nisi minus veritatis. Quisquam.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eaque quod cumque possimus rem recusandae tenetur,
-                    id molestias at dolorem esse dignissimos suscipit neque ut atque, nisi minus veritatis. Quisquam.
+                    Undergoing all kinds of projects and making them available to the public for free is not an easy task.
+                    It requires a lot of time, effort and resources. If you would like to support my work, please consider making a donation.
                 </p><br/>
             </section><br/><br/>
             <section id="sec2-intro">
                 <h2>Bank details</h2>
                 <h3>
                     Bank Name: OPay<br/>
-                    Bank Number: 1234567890<br/>
-                    Account Name: Gbxbxbxbxbx
+                    Bank Number: 8034456641<br/>
+                    Account Name: GABRIEL OLUSEGUN OLUWAGBEMIGA
                 </h3><br/>
             </section>
             <br/><br/><br/><br/><br/>

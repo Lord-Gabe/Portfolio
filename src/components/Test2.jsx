@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom"
-import img1 from "../assets/NIIT.jpg"
-import img2 from "../assets/Itchio.jpg"
-
+import cs from '../assets/CS.png'
+import fr from '../assets/FR.png'
+import ni from '../assets/NI.png'
+import armageddon from '../assets/armageddon.png'
+import TD from '../assets/TD.png'
+import compBiz from '../assets/compBiz.png'
+import CosmicO from '../assets/CosmicO.png'
+import TheLight from '../assets/TheLight.png'
+import nova from '../assets/nova.png'
 
 export default function Test2(){
 
@@ -16,7 +22,7 @@ export default function Test2(){
     return(
         <>
             <head>
-                <title>LG Studio: Affliates</title>
+                <title>LG Studio: Past Projects</title>
             </head>
             <header>
                 <div id="head">
@@ -25,43 +31,71 @@ export default function Test2(){
                     </h2>
                     <ul id="nav">
                         <il> <a id="c" href="/" onClick={home_page()}>Home</a> </il>
-                        <il> <a id= "d" href="/Donate" onClick={next_page()}>Donate</a> </il>
                     </ul>
                 </div>
             </header>
 
-            <h1>Affliates</h1><br/>
-            <section id="sec2-intro"> 
-                <br/> 
+            <h2>PROJECTS</h2>
+                <h3>Games</h3>
+                <p className="fade-in-text"> 
+                    Over the past year, i have released two games so far with one yet to be released under reworking
+                    and debugging and the other under development. These things do take alot of time to make and more 
+                    than one plans on the projects due to error and bug fixes, unexpectances along the way and so on.
+                    The two games released on our partner website Itch.io are:
+                </p><br/>
+                <div id="services">
+                <div className="service-grid fade-up">
+                    <section className="service-card scale-hover">
+                        <img src={armageddon} width="200" height="200" className="scale-hover"/><br/>
+                        <a href="https://lord-gabe.itch.io/armageddon" target="_blank">Armageddon</a>
+                    </section>
+                    <section className="service-card scale-hover">
+                        <img src={TD} width="200" height="200" className="scale-hover"/><br/>
+                        <a href="https://lord-gabe.itch.io/the-deadline" target="_blank">The Deadline</a>
+                    </section>
+                    <section className="service-card scale-hover">
+                        <img src={CosmicO} width="200" height="200" className="scale-hover"/><br/>
+                        <a href="https://cosmic-outlaws-4e3de.web.app/" target="_blank">Cosmic Outlaws</a>
+                    </section>
+                    <section className="service-card scale-hover">
+                        <img src={TheLight} width="200" height="200" className="scale-hover"/><br/>
+                        <a href="https://lord-gabe.itch.io/the-light" target="_blank">The Light</a>
+                    </section>
+                </div>
+                </div>
                 
-                <p id="photo_txt">
-                    We are partnered at the moment with National Institute of Information and Technology  
-                    <a href="https://www.niit.com/nigeria/">(NIIT)</a>, 
-                    grooming young scholars and even many who of age have come to learn about the use of computer softwares and its 
-                    applicability in their work places.
-                    It is undoubtably notable how technology has so much blended into our daily lives and activites making
-                    life easier and simplier even to future generations.
-                </p>
-                <img id="icons" src={img1}  width={"350px"} height={"350px"}/>
-            </section>
-            <br/><br/>
-
-            <section id="sec2-intro">    
-                <br/>
-                
-                <p id="photo_txt">
-                    We are also partnered with <a href="https://itch.io/">Itch.io</a>. A very notable and fun place to be in where you connect with various
-                    game developers be it 2D or 3D, discussing, sharing ideas, engaging in competitions, learning, collaborating,
-                    getting feedbacks on projects, even publishing your very own game.
-                </p>
-                <img id="icons" src={img2}  width={"350px"} height={"350px"}/>
-            </section>
+                <br/><br/><br/>
+                <h3>Websites</h3>
+                <p className="fade-in-text">
+                    I also have been engaged in making websites on the side track too
+                    and some websites i have worked on in the past include:
+                </p><br/>
+                <div id="services">
+                    <div className="service-grid">
+                        <section className="service-card scale-hover">
+                            <img src={ni} width="200" height="200" className="scale-hover"/><br/>
+                            <a href="">Neseria</a>
+                        </section>
+                        <section className="service-card scale-hover">
+                            <img src={cs} width="200" height="210" className="scale-hover"/><br/>
+                            <a href="">Country Search</a>
+                        </section>
+                        <section className="service-card scale-hover">
+                            <img src={compBiz} width="200" height="210" className="scale-hover"/><br/>
+                            <a href="https://lord-gabe.github.io/Landing_page/">BizBrand</a>
+                        </section>
+                        <section className="service-card scale-hover">
+                            <img src={nova} width="200" height="210" className="scale-hover"/><br/>
+                            <a href="https://novatech-psi.vercel.app/">Novatech </a>
+                        </section>
+                    </div>
+                </div>
 
             
             <br/><br/><br/><br/><br/>
             <footer id="foot">
                 All rights reserved
-                <h3>&copy; LG Studio 2025</h3>
+                <h2 id="footer">&copy; LG Studio 2025</h2>
             </footer>
         </>
     )
