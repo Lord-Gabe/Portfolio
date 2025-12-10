@@ -87,7 +87,7 @@ export default function Test1(){
                     <h2>Vision and Ambition</h2>
                         <p id="goldenrod-text">The future holds a lot of secrets which can only been seen by those who prepare for it today</p>
                         <p id="goldenrod-text">
-                            I am aim and strive to become a creatively great game and website developer. 
+                            Standing on this, I strive to become a creatively great game and website developer. 
                             One worthy, one fit to satisfy and surpass your expectation and to leave you with a smile.  
                         </p>
                 </section>
@@ -97,6 +97,7 @@ export default function Test1(){
             <br/>
         
             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
             
         <footer id="foot">
             <h4>

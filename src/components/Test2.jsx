@@ -9,6 +9,7 @@ import CosmicO from '../assets/CosmicO.png'
 import TheLight from '../assets/TheLight.png'
 import nova from '../assets/nova.png'
 
+
 export default function Test2(){
 
     //to previous page
@@ -17,6 +18,16 @@ export default function Test2(){
     }
     function home_page(){
         <Link to="/"></Link>
+    }
+
+    function sendmail(){
+        const fname = document.getElementsByName("name");
+        const email = document.getElementsByName("mail");
+        const message = document.getElementsByName("msg");
+
+        if ((fname === "") || (email === "") || (message === "")){
+            alert("You must fill all feilds");
+        }
     }
 
     return(
@@ -82,7 +93,7 @@ export default function Test2(){
                         </section>
                         <section className="service-card scale-hover">
                             <img src={compBiz} width="200" height="210" className="scale-hover"/><br/>
-                            <a href="https://lord-gabe.github.io/Landing_page/">BizBrand</a>
+                            <a href="https://blp-inky.vercel.app/">BizBrand</a>
                         </section>
                         <section className="service-card scale-hover">
                             <img src={nova} width="200" height="210" className="scale-hover"/><br/>
@@ -90,6 +101,18 @@ export default function Test2(){
                         </section>
                     </div>
                 </div>
+
+            <br/><br/><br/><section>
+                <form>
+                    <h2>
+                        Got a project idea? Lets Chat
+                    </h2>
+                    <input type="text" placeholder="Full Name" name="name" required></input><br/><br/>
+                    <input type="text" placeholder="Email" name="mail" required></input><br/><br/>
+                    <textarea type="text" placeholder="Message" cols={22} rows={10} name="msg" required></textarea><br/><br/>
+                    <button type="submit" id="btn" onClick={sendmail}>Send message</button>
+                </form>
+            </section>
 
             
             <br/><br/><br/><br/><br/>
